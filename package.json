@@ -1,0 +1,36 @@
+{
+  "name": "jate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "client": "cd client && npm start",
+    "install": "cd client && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.5.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "17.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanicesauce/JATE.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shanicesauce/JATE/issues"
+  },
+  "homepage": "https://github.com/shanicesauce/JATE#readme"
+}
